@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net462</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\multiCloud\multiCloud.csproj" />
+		<Reference Include="PresentationCore" />
+		<Reference Include="PresentationFramework" />
+		<Reference Include="System.ServiceModel" />
+		<Reference Include="System.Windows" />
+		<Reference Include="System.Xaml" />
+		<Reference Include="WindowsBase" />
+		<PackageReference Include="ReactiveUI" Version="7.4.0" />
+		<PackageReference Include="Serilog" Version="2.7.1" />
+		<PackageReference Include="Serilog.Extensions.Logging.File" Version="1.1.0" />
+		<Page Include="**\*.xaml" SubType="Designer" Generator="MSBuild:Compile" />
+		<Compile Update="**\*.xaml.cs" SubType="Designer" DependentUpon="%(Filename)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="credentials.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,19 @@
+image: Visual Studio 2017
+version: 1.0.{build}
+configuration: Release
+platform: Any CPU
+nuget:
+  disable_publish_on_pr: true
+before_build:
+  - msbuild /t:restore ./src/multiCloud.sln
+build:
+  project: ./src/multiCloud.sln
+  publish_nuget: false
+  verbosity: minimal
+notifications:
+- provider: Slack
+  incoming_webhook: https://hooks.slack.com/services/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
+  channel: '#appveyor-ci'
+  on_build_success: true
+  on_build_failure: true
+  on_build_status_changed: false

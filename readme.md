@@ -1,7 +1,7 @@
 ![HeadBanner](docs/imgs/headbanner.png)
 [![Build status](https://ci.appveyor.com/api/projects/status/gam48s84441rlcso/branch/master?svg=true)](https://ci.appveyor.com/project/dvoaviarison/multi-cloud/branch/master)
 # Multi Cloud
-Fast IPC is an open source .Net library that aims to provide with extremely simplified access to multiple cloud drives through the same interface.
+Multi Cloud is an open source .Net library that aims to provide with extremely simplified access to multiple cloud drives through the same interface.
 That includes:
 - Encapsulation of authentification. All you need is to provice you application [API credential file](https://cloud.google.com/genomics/docs/how-tos/getting-started)
 - Getting list of files, and very easily navigate through the folder trees.
